@@ -1,0 +1,28 @@
+#box-centerside {
+  width: 1000px;
+}
+.mini-box {
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+}
+.Intime {
+  margin-left: -39px;
+}
+.Outtime {
+  margin-left: -33px;
+}
+.closeBtn {
+  margin-left: 410px;
+}
+#calenderBtn
+{
+  margin-left: 237px;
+  margin-top: -56px;
+}
+#inputDate
+{
+  width: 200px;
+  height: 35px;
+}

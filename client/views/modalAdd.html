@@ -1,0 +1,100 @@
+<!-- <div ng-controller="TimepickerCtrl">
+    <div>
+        <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+
+        <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
+
+        <div class="row">
+            <div class="col-xs-6">
+                Hours step is:
+                <select class="form-control" ng-model="hstep" ng-options="opt for opt in options.hstep"></select>
+            </div>
+            <div class="col-xs-6">
+                Minutes step is:
+                <select class="form-control" ng-model="mstep" ng-options="opt for opt in options.mstep"></select>
+            </div>
+        </div>
+
+        <hr>
+
+        <button type="button" class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
+        <button type="button" class="btn btn-default" ng-click="update()">Set to 14:00</button>
+        <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
+    </div>
+</div> -->
+
+
+<div class="container" id="box-centerside">
+    <div class="col-md-8" ng-controller="TimepickerCtrl">
+        <br>
+        <div style="Padding:20px;">
+            <form name='form' class='form-horizontal' role='form'>
+                <div class='form-group' style="Padding:20px;">
+                    <div class="row">
+                        Date:
+                        <!-- <span class="add-on" > -->
+                        <input id="inputDate" type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp" ng-change="newDate()"> </input>
+                        <button id="calenderBtn" type="button" class="btn btn-default" ng-click="showcalendar($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                            <!-- </span> -->
+                        </button>
+                    </div>
+                </div>
+                <div class='form-group '>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="row">
+                                <div>
+                                    <div class="mini-box">&nbsp</div>
+                                </div>
+                                <div>
+                                    <div class="mini-box">In Time :</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="Intime" uib-timepicker ng-model="inTime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="row">
+                                <div>
+                                    <div class="mini-box">&nbsp</div>
+                                </div>
+                                <div>
+                                    <div class="mini-box">Out Time : </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="Outtime" uib-timepicker ng-model="outTime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class='form-group '>
+                    <div class="row">
+                        <div class="col-sm-5"> Working :
+                            <select ng-model="selectedDay" ng-options="Day for Day in WorkingDay">
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            No. of Hours: {{diffHour}} hr {{diffMin}} min
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="checkbox" onclick="var input = document.getElementById('name2');
+if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" />Reason for absence
+
+                            <textarea class="form-control" ng-model="reasonForAbsence" disabled="disabled" rows="3" id="name2"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="closeBtn" ng-controller="profileCtrl">
+                        <button type="button" class="btn btn-primary" ng-click="close()">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="$parent.submit()">submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

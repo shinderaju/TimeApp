@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Popup Timepicker Demo Using AngularJS, Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="Popup Timepicker Demo Using AngularJS, Bootstrap.">
+    <!--
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.js"></script>
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+<script	src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
+-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="/home/bridgeit/Music/timepickerpop-master/client/bower_components/angular/angular.js"></script>
+	<script src="/home/bridgeit/Music/timepickerpop-master/client/bower_components/angular/angular-route.js"></script>
+	<script src="/home/bridgeit/Music/timepickerpop-master/client/bower_components/angular/angular-resource.js"></script>
+	<script src="/home/bridgeit/Music/timepickerpop-master/client/bower_components/bootstrap/dist/js/ui-bootstrap-tpls.js"></script>
+
+</head>
+
+<body>
+    <div ui-view></div>
+
+</body>
+<!-- Application Script -->
+<script src="app.js"></script>
+<script src="controller/loginCtrl.js"></script>
+<script src="controller/profileCtrl.js"></script>
+<script src="directive/datetimez.js"></script>
+
+
+</html>

@@ -1,0 +1,18 @@
+/**
+ * Anularjs Module for pop up timepicker
+ */
+angular.module('timepickerPop', [ 'ui.bootstrap' ])
+.factory('timepickerState', function() {
+  var pickers = [];
+  return {
+		addPicker: function(picker) {
+			pickers.push(picker);
+		},
+		closeAll: function() {
+			for (var i=0; i<pickers.length; i++) {
+				pickers[i].close();
+			}
+		}
+	};
+})
+

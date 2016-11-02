@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Popup Timepicker Demo Using AngularJS, Bootstrap</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Popup Timepicker Demo Using AngularJS, Bootstrap.">
+
+	<!--
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.js"></script>
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+<script	src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
+-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular.js"></script>
+	<script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular-route.js"></script>
+	<script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular-resource.js"></script>
+
+	<script	src="/home/bridgeit/Music/HrApp/client/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script	src="/home/bridgeit/Music/HrApp/client/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script	src="/home/bridgeit/Music/HrApp/client/bower_components/bootstrap/dist/js/ui-bootstrap-tpls.js"></script>
+	<script	src="/home/bridgeit/Music/HrApp/client/bower_components/bootstrap/dist/js/ui-bootstrap-tpls.min.js"></script>
+	
+	
+	
+
+
+	<script type="text/javascript">
+		angular.module('timepickerDemo', ['ui.bootstrap']).controller(
+			'DemoCtrl',
+			function($scope) {
+				$scope.time1 = new Date();
+				$scope.time2 = new Date();
+				$scope.time2.setHours(7, 30);
+				$scope.showMeridian = true;
+				$scope.disabled = false;
+
+			});
+	</script>
+
+</head>
+
+<body>
+	<div class="container" ng-app="timepickerDemo">
+		<div class="col-md-8" ng-controller='DemoCtrl'>
+			<h1>Popup Timepicker Demo</h1>
+			<div '>
+				<form name='form ' class='form-horizontal ' role='form '>
+					<div class='form-group '>
+						<div class="row">
+							<div class="col-sm-4">In Time:
+								<timepicker ng-model="time1" show-meridian='showMeridian ' />
+							</div>
+							<div class="col-sm-4">Out Time:
+								<timepicker ng-model="time2" show-meridian='showMeridian ' />
+							</div>
+						</div>
+					</div>
+					<div class='form-group '>
+						<div class="row">
+							<div class="col-sm-4"> Working :
+								<select ng-model="selectedDay" ng-options="x for x in WorkingDay">
+								</select>
+							</div>
+							<div class="col-sm-4">
+								No. of Hours: {{humanReadable.hours}} hr {{humanReadable.minutes}} min
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-8">
+							<input type="checkbox" onclick="var input = document.getElementById('name2');
+if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" />Reason for absence
+
+							 <textarea class="form-control" disabled="disabled" rows="3" id="name2"></textarea>
+						</div>
+					</div><br>
+						<div class="closeBtn" style="align:center">
+							<button type="button" class="btn btn-primary" ng-click="close()">Close</button>
+		          <button type="button" class="btn btn-primary" ng-click="submit()">submit</button>
+		        </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
