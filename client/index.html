@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Popup Timepicker Demo Using AngularJS, Bootstrap</title>
+    <title>Attendance App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="description" content="Popup Timepicker Demo Using AngularJS, Bootstrap.">
@@ -16,33 +16,44 @@
 -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular.js"></script>
-    <script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular-animate.js"></script>
-    <script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular-sanitize.js"></script>
-    <script src="/home/bridgeit/Music/HrApp/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular-route.js"></script>
-    <script src="/home/bridgeit/Music/HrApp/client/bower_components/angular/angular-resource.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular-animate.js"></script>
+    <script src="bower_components/angular/angular-sanitize.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular/angular-route.js"></script>
+    <script src="bower_components/angular/angular-resource.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
 
 
 </head>
 
 <body ng-app="HrApp">
     <div ui-view></div>
+
+
+    <!-- Application Dependencies -->
+
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.css"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.min.css"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+    <script src="controllers/loginCtrl.js"></script>
+    <script src="controllers/profileCtrl.js"></script>
+    <script src="controllers/TimepickerCtrl.js"></script>
+    <script src="controllers/editCtrl.js"></script>
+    <script src="services/date.js"></script>
+    <script src="services/timeDiff.js"></script>
+    <script src="services/TimeAmPm.js"></script>
+    <script src="services/submitdata.js"></script>
+
 </body>
 
-
-<!-- Application Dependencies -->
-
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
-<script src="bower_components/angular-toastr/dist/angular-toastr.css"></script>
-
-<!-- Application Script -->
-<script src="app.js"></script>
-<script src="controllers/loginCtrl.js"></script>
-<script src="controllers/profileCtrl.js"></script>
-<script src="controllers/TimepickerCtrl.js"></script>
 
 
 </html>

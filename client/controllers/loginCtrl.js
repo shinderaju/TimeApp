@@ -3,14 +3,10 @@
 
 var HrApp = angular.module('HrApp');
 HrApp.controller('loginCtrl', function ($scope, $location, $http, toastr) {
-  console.log("hi");
-
-
   /**
    * Login Athentication
    * @cunstructor
    * @param(string)-email
-   *
    *
    */
   $scope.submit = function () {
@@ -24,6 +20,7 @@ HrApp.controller('loginCtrl', function ($scope, $location, $http, toastr) {
       if (data == "invalid email") {
         toastr.error("Invalid email");
       } else {
+        toastr.success('You have successfully logged in!');
         console.log("login successfully");
         console.log(data);
         $location.path('/profile').search({

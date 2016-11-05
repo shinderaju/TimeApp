@@ -1,8 +1,13 @@
 <nav class="navbar navbar-default" id="navProfile">
     <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-left">
+          <li>
+              <h4>Attendance Hr</h4>
+          </li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a class="fa fa-user"> {{user}}</a>
+                <a class="fa fa-user"> {{userName}}</a>
             </li>
             <li>
                 <a href="#" class="btn btn-info btn-sm">
@@ -14,11 +19,12 @@
 </nav>
 <div class="container">
     <div>
-        <h2>Basic Modal Example</h2>
+
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info btn-sm" ng-click="open(1)">Add</button>
         <button type="button" class="btn btn-info btn-sm" ng-click="open(2)">Edit</button>
     </div>
+    <br>
     <br>
     <div class="container">
         <table class="table table-bordered">
@@ -45,4 +51,3 @@
         </table>
     </div>
 </div>
-

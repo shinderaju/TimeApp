@@ -1,0 +1,26 @@
+<div class="container" id="box-centerside">
+    <div class="col-md-8" ng-controller="TimepickerCtrl">
+        <br>
+        <div style="Padding:20px;">
+            <form name='form' class='form-horizontal' role='form'>
+                <div class='form-group' style="Padding:20px;">
+                    <div class="row">
+                        Date:
+                        <!-- <span class="add-on" > -->
+                        <input id="inputDate" type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp" > </input>
+                        <button id="calenderBtn" type="button" class="btn btn-default" ng-click="showcalendar($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                            <!-- </span> -->
+                        </button>
+                    </div>
+                    <br>
+                    <div class="closeBtn">
+                        <button type="button" class="btn btn-primary" ng-click="close()">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="retriveDayAttendance()">Edit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

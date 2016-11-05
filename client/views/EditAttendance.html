@@ -1,38 +1,11 @@
-<!-- <div ng-controller="TimepickerCtrl">
-    <div>
-        <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
-
-        <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
-
-        <div class="row">
-            <div class="col-xs-6">
-                Hours step is:
-                <select class="form-control" ng-model="hstep" ng-options="opt for opt in options.hstep"></select>
-            </div>
-            <div class="col-xs-6">
-                Minutes step is:
-                <select class="form-control" ng-model="mstep" ng-options="opt for opt in options.mstep"></select>
-            </div>
-        </div>
-
-        <hr>
-
-        <button type="button" class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
-        <button type="button" class="btn btn-default" ng-click="update()">Set to 14:00</button>
-        <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
-    </div>
-</div> -->
-
-
 <div class="container" id="box-centerside">
-    <div class="col-md-8" ng-controller="TimepickerCtrl">
+    <div class="col-md-8" ng-controller="editCtrl">
         <br>
         <div style="Padding:20px;">
             <form name='form' class='form-horizontal' role='form'>
                 <div class='form-group' style="Padding:20px;">
                     <div class="row">
                         Date:
-                        <!-- <span class="add-on" > -->
                         <input id="inputDate" type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp"> </input>
                         <button id="calenderBtn" type="button" class="btn btn-default" ng-click="showcalendar($event)">
                             <i class="glyphicon glyphicon-calendar"></i>
@@ -89,7 +62,7 @@ if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=tru
                         </div>
                     </div>
                     <br>
-                    <div class="closeBtn" >
+                    <div class="closeBtn">
                         <button type="button" class="btn btn-primary" ng-click="close()">Close</button>
                         <button type="button" class="btn btn-primary" ng-click="submitdata()">submit</button>
                     </div>
